@@ -54,35 +54,61 @@
             units = ($.storage.get('preference_units') !== null) ? $.storage.get('preference_units') : options.units;
 
             if(options.coords && !options.city){
-                query += 'lat='+options.coords.lat + '&long=' + options.coords.long;
+                query += 'lat=' + options.coords.lat + '&lon=' + options.coords.lon;
             } else if(options.city && !options.coords){
                 query += 'q='+options.city;
             }
 
             query += '&units=' + units;
 
-            $.json(API_URL + '/?' + query, function(data){
-                options.success(data);
+            $.json(API_URL + '?' + query, function(data){
+                if(data !== null){
+                    options.success(data);
+                }
             });
         }
 
 
         return {
-            request     : request,
-            tempToC     : convertToC,
-            tempToF     : convertToF
+            request : request,
+            tempToC : convertToC,
+            tempToF : convertToF
         }
 
     })();
 
-    // Usage Demo:
+
+    // Coords usage demo:
+
+    // GeoLocation.get({
+    //     success: function(data){
     //
+    //         var weather = Weather.request({
+    //             units: 'metric'
+    //             coords: {
+    //                 lat: data.coords.latitude,
+    //                 lon: data.coords.longitude
+    //             },
+    //             success: function(data){
+    //                 console.log(data);
+    //             },
+    //         });
+    //
+    //     },
+    //     error: function(data){
+    //         console.log(data);
+    //     }
+    // });
+
+
+    // City Usage Demo:
+
     // var weather = Weather.request({
+    //     units: 'metric'
     //     city: 'Belgrade',
     //     success: function(data){
     //         console.log(data);
     //     },
-    //     units: 'metric'
     // });
 
 })();
