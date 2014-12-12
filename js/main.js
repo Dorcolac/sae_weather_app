@@ -79,11 +79,12 @@
 
 
     // Coords usage demo:
-    //
+
     // GeoLocation.get({
     //     success: function(data){
     //
     //         var weather = Weather.request({
+    //             units: 'metric'
     //             coords: {
     //                 lat: data.coords.latitude,
     //                 lon: data.coords.longitude
@@ -91,7 +92,6 @@
     //             success: function(data){
     //                 console.log(data);
     //             },
-    //             units: 'metric'
     //         });
     //
     //     },
@@ -104,11 +104,11 @@
     // City Usage Demo:
 
     // var weather = Weather.request({
+    //     units: 'metric'
     //     city: 'Belgrade',
     //     success: function(data){
     //         console.log(data);
     //     },
-    //     units: 'metric'
     // });
 
 })();
