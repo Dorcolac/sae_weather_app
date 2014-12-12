@@ -1,0 +1,178 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-attachment: fixed;	
+	background-image: url(../images/cover.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: "Roboto", sans-serif;
+	font-weight: normal;
+	color: #fff;
+}
+
+
+.container {
+	overflow: hidden;
+	width: 960px;
+	margin: 3% auto auto;
+}
+
+#logo {
+	float: left;
+	width: 230px;
+	height: 50px;
+}
+
+#logo img {
+	vertical-align: bottom;
+}
+
+#logo a {
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
+	color: #fff;
+	padding-left: 20px;
+}
+
+#search-box {
+	float: right;
+	width: 320px;
+	height: 40px;
+	border-bottom: 1px solid #fff;
+}
+
+#magnifier {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  background-image: url(../images/magnifier.png);
+  background-repeat: no-repeat;
+}
+
+input {
+	background: none repeat scroll 0 0 transparent;
+	float: left;
+	width: 220px;
+    background: transparent;
+	color: #fff;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: medium none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#x-button {
+	float: right;
+	width: 30px;
+	  height: 30px;
+	  margin-top: 10px;
+	  margin-right: -7px;
+	  vertical-align: top;
+	  background-image: url(../images/x-button.png);
+	  background-repeat: no-repeat;
+}
+
+.info-wrapper {
+	clear: both;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30%;
+	width: 480px;
+	height: 180px;
+}
+
+#weather-icon {
+	float: left;
+	height: 200px;
+	width: 136px;
+	background-image: url(../images/sun-rain.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#weather-icon img {
+	padding-left: 20px;
+}
+
+.right-info {
+	float: right;
+	width: 320px;
+}
+
+#temperature {
+	float: left;
+	height: 130px;
+	width: 320px;
+	line-height: 64px;
+}
+
+#temperature p {
+	font-size: 72px;
+	font-weight: lighter;
+	margin-top: 20px;
+	word-spacing: 3px;
+	font-weight: 100;
+}
+
+#temperature span {
+	font-size: 16px;
+	vertical-align: text-top;
+}
+
+#add-info {
+	clear: both;
+	width: 300px;
+    margin-top: -20px;
+}
+
+#precipitation {
+	float: left;
+    width: 20%;
+	height: 50px;
+	background-image: url(../images/raindrop.png);
+    background-repeat: no-repeat;
+}
+
+
+
+#wind {
+	float: left;
+    width: 32%;
+	height: 50px;
+	margin-left: 18px;
+	background-image: url(../images/wind.png);
+    background-repeat: no-repeat;
+}
+
+#chances-of {
+	float: left;
+    width: 23%;
+	height: 50px;
+	margin-left: 18px;
+	background-image: url(../images/chances-of.png);
+    background-repeat: no-repeat;
+}
+
+#precipitation span {
+	float: right; 
+}
+
+#wind span {
+	float: right; 
+	
+}
+
+#chances-of span {
+	float: right; 
+	
+}
+
+
+
+
+
+
