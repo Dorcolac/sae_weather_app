@@ -250,7 +250,7 @@
 
                         checkOptions.singleCallback === false ? options.success(data, response) : checkOptions.successCallback(data, response);
                     }
-                    else if(checkOptions.singleCallback === false) {
+                    else if(checkOptions.singleCallback === false && options.error) {
                         options.error(xhr.status, response);
                     }
                 }
@@ -276,8 +276,8 @@
                         response = xhr;
 
                         options.success(data, response);
-                    } else {
-                        options.error(xhr.status, response);
+                    } else if(options.error) {
+                        options.error(xhr.status);
                     }
                 }
             }
@@ -297,8 +297,8 @@
                         return false;
                     }
                 },
-                error: function(data, response){
-                    callback(data, response);
+                error: function(){
+                    callback(null);
                 }
             });
 
@@ -309,10 +309,10 @@
             options = options || {};
 
             var type    = options.type,
-            url     = options.url,
-            data    = options.data;
-            success = options.success,
-            error   = options.error || function(){};
+                url     = options.url,
+                data    = options.data;
+                success = options.success,
+                error   = options.error || function(){};
 
             var query = _encodeComponents(data);
 
@@ -327,7 +327,7 @@
 
         return {
             get: get,
-            // post: post,
+            post: post,
             json: json,
             ajax: ajax
         }
@@ -335,6 +335,7 @@
     })();
 
     exports.get = ajax.get;
+    exports.post = ajax.post;
     exports.json = ajax.json;
     exports.ajax = ajax.ajax;
 
